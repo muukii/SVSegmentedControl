@@ -144,7 +144,7 @@
 
     CGFloat cornerRadius = self.segmentedControl.cornerRadius;
     CGRect fillRect = thumbRect;
-    UIBezierPath* roundedRectanglePath = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(fillRect,0.5,0.5) cornerRadius:cornerRadius];
+    UIBezierPath* roundedRectanglePath = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(fillRect,0.5,0.5) cornerRadius:cornerRadius*0.7];
     [self.tintColor setFill];
     [roundedRectanglePath fill];
     [self.borderColor setStroke];
