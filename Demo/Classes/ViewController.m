@@ -56,16 +56,23 @@
 	// 4th CONTROL
 	SVSegmentedControl *yellowRC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"One", @"Two", @"Three", nil]];
     [yellowRC addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
-	yellowRC.crossFadeLabelsOnDrag = YES;
-	yellowRC.font = [UIFont fontWithName:@"Marker Felt" size:20];
-	yellowRC.titleEdgeInsets = UIEdgeInsetsMake(0, 14, 0, 14);
-	yellowRC.height = 40;
-    [yellowRC setSelectedSegmentIndex:2 animated:NO];
-	yellowRC.thumb.tintColor = [UIColor colorWithRed:0.999 green:0.889 blue:0.312 alpha:1.000];
-	yellowRC.thumb.textColor = [UIColor blackColor];
-	yellowRC.thumb.textShadowColor = [UIColor colorWithWhite:1 alpha:0.5];
-	yellowRC.thumb.textShadowOffset = CGSizeMake(0, 1);
-	
+
+	yellowRC.backgroundTintColor = [UIColor grayColor];
+    yellowRC.height = 25;
+    yellowRC.textShadowColor = [UIColor clearColor];
+    yellowRC.thumbEdgeInset = UIEdgeInsetsMake(0, 0, 2, 0);
+    yellowRC.textColor = [UIColor blueColor];
+    yellowRC.borderColor = [UIColor blueColor];
+    yellowRC.borderWidth = 0.5;
+
+    SVSegmentedThumb *thumb = yellowRC.thumb;
+
+    thumb.tintColor = [UIColor blackColor];
+    thumb.textColor = [UIColor blueColor];
+    thumb.shouldCastShadow = NO;
+    thumb.borderColor = [UIColor blueColor];
+    thumb.borderWidth = 0.5;
+
 	[self.view addSubview:yellowRC];
 	
 	yellowRC.center = CGPointMake(160, 370);

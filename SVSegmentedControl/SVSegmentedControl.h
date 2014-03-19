@@ -43,6 +43,9 @@
 @property (nonatomic, readwrite) CGSize textShadowOffset;  // default is CGSizeMake(0, -1)
 @property (nonatomic, strong) UIColor *innerShadowColor; // default is [UIColor colorWithWhite:0 alpha:0.8]
 
+@property (nonatomic, readwrite) CGFloat borderWidth; // default is 0
+@property (nonatomic, strong) UIColor *borderColor; // default is [UIColor clearColor]
+
 - (SVSegmentedControl*)initWithSectionTitles:(NSArray*)titlesArray;
 - (void)setSelectedSegmentIndex:(NSUInteger)index animated:(BOOL)animated;
 
