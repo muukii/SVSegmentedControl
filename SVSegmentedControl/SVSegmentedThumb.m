@@ -255,7 +255,7 @@
         self.alpha = 0.8;
 
     } else {
-        self.alpha = 0.8;
+        self.alpha = 1;
     }
 
 	[self setNeedsDisplay];
